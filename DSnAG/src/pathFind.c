@@ -37,6 +37,11 @@ int adv_map[5][5] = {
 
 long long path[10][10];
 
+long long max( long long x, long long y )	{
+	if( x > y )	return x;
+	return y;
+}
+
 void cal_path( int m, int n )	{
 	int i, j;
 
@@ -69,11 +74,6 @@ void cal_path( int m, int n )	{
 			}
 		}
 	}
-}
-
-long long max( long long x, long long y )	{
-	if( x > y )	return x;
-	return y;
 }
 
 long long num_path_adv( int m, int n )	{

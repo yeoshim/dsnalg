@@ -15,6 +15,27 @@
 
 #define MAXN 100
 
+void testJoyPathG()	{
+	int m = 5;
+	int n = 5;
+
+	joy_draw( m-1, n-1 );
+//	print_path();
+	draw_path( m-1, n-1 );
+}
+
+void testJoyPathD()	{
+	int m = 5;
+	int n = 5;
+	printf( "Max JoyD: %d\n", max_joy_d(m, n) );
+}
+
+void testJoyPath()	{
+	int m = 5;
+	int n = 5;
+	printf( "Max Joy: %d\n", max_joy(m, n) );
+}
+
 void testPathAdv()	{
 	int m = 5;
 	int n = 5;
@@ -95,7 +116,10 @@ int main(void) {
 	setvbuf(stderr, NULL, _IONBF, 0);
 //	printf( "Hello World!!!\n" );
 
-	testPathAdv();
+	testJoyPathG();
+	testJoyPathD();
+	testJoyPath();
+//	testPathAdv();
 //	testPath2();
 //	testPath();
 //	testgCode();
