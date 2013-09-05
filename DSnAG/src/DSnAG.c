@@ -15,6 +15,43 @@
 
 #define MAXN 100
 
+void testSumSSD()	{
+	int m = 110;
+	int n = 10;
+	int set[] = { 6, 9, 13, 14, 20, 21, 22, 30, 49, 55 };
+	printf( "m: %d n:%d is %d\n", m, n, sum_subset_d(set, m, n) );
+
+	m = 100;
+	n = 6;
+	int set2[] = { 1, 2, 3, 4, 5, 6 };
+	printf( "m: %d n:%d is %d\n", m, n, sum_subset_d(set2, m, n) );
+}
+
+void testSumSSM()	{
+	int m = 110;
+	int n = 10;
+	int set[] = { 6, 9, 13, 14, 20, 21, 22, 30, 49, 55 };
+	printf( "m: %d n:%d is %d\n", m, n, sum_subset_m(set, m, n) );
+
+	m = 101;
+	n = 10;
+	int set2[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+	printf( "m: %d n:%d is %d\n", m, n, sum_subset_m(set2, m, n) );
+}
+
+
+void testSumSS()	{
+	int m = 110;
+	int n = 10;
+	int set[] = { 6, 9, 13, 14, 20, 21, 22, 30, 49, 55 };
+	printf( "m: %d n:%d is %d\n", m, n, sum_subset(set, m, n) );
+
+	m = 101;
+	n = 10;
+	int set2[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+	printf( "m: %d n:%d is %d\n", m, n, sum_subset(set2, m, n) );
+}
+
 void testJoyPathG()	{
 	int m = 5;
 	int n = 5;
@@ -116,9 +153,12 @@ int main(void) {
 	setvbuf(stderr, NULL, _IONBF, 0);
 //	printf( "Hello World!!!\n" );
 
-	testJoyPathG();
-	testJoyPathD();
-	testJoyPath();
+	testSumSSD();
+	testSumSSM();
+	testSumSS();
+//	testJoyPathG();
+//	testJoyPathD();
+//	testJoyPath();
 //	testPathAdv();
 //	testPath2();
 //	testPath();
